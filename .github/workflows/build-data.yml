@@ -24,14 +24,18 @@ jobs:
 
       - run: npm run build:data
 
-      - name: Commit regenerated data if changed
+      # Rebuilds the self-contained standalone/index.html (JS/CSS/fonts inlined) from the
+      # freshly-generated data too, so the offline downloadable copy stays in sync.
+      - run: npm run build:single
+
+      - name: Commit regenerated data and standalone build if changed
         run: |
-          if git diff --quiet -- src/data/lubricants.generated.json src/data/meta.generated.json; then
+          if git diff --quiet -- src/data/lubricants.generated.json src/data/meta.generated.json standalone/index.html; then
             echo "No data changes, nothing to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/data/lubricants.generated.json src/data/meta.generated.json
+          git add src/data/lubricants.generated.json src/data/meta.generated.json standalone/index.html
           git commit -m "chore: regenerate lubricant data from data/raw/"
           git push
