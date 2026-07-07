@@ -27,9 +27,13 @@ export function ResultsTable({ results, query, sortColumn, sortDirection, onSort
     return (
       <div className={styles.emptyState}>
         <div className={styles.emptyIcon} aria-hidden="true">
-          {hasQuery ? "🔍" : "🏷"}
+          {hasQuery ? "🔎" : "🛢️"}
         </div>
-        <p>{hasQuery ? "ไม่พบข้อมูลที่ตรงกับคำค้นหา" : "พิมพ์ EQ Tag หรือชื่ออุปกรณ์เพื่อเริ่มค้นหา"}</p>
+        <p>
+          {hasQuery
+            ? "ไม่พบรายการที่ตรงกับคำค้น — ลองตรวจสอบรหัสอุปกรณ์อีกครั้ง"
+            : "เริ่มพิมพ์ในช่องค้นหาด้านบน — ใช้รหัสอุปกรณ์ (เช่น PP-503) หรือชื่ออุปกรณ์ (เช่น Pump)"}
+        </p>
       </div>
     );
   }
@@ -37,7 +41,7 @@ export function ResultsTable({ results, query, sortColumn, sortDirection, onSort
   return (
     <div className={styles.tableWrap}>
       <table className={styles.table}>
-        <caption className="sr-only">ผลการค้นหาสารหล่อลื่นตามอุปกรณ์ เรียงตามคอลัมน์ที่เลือก</caption>
+        <caption className="sr-only">ตารางข้อมูลจุดหล่อลื่นของอุปกรณ์ที่ตรงกับคำค้น เรียงตามคอลัมน์ที่เลือก</caption>
         <thead>
           <tr>
             {COLUMNS.map((col) => {

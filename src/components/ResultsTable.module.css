@@ -8,8 +8,8 @@
   min-width: 980px;
 }
 .th {
-  background: var(--navy);
-  color: #fff;
+  background: var(--thead-bg);
+  color: var(--thead-fg);
   font-size: 12px;
   font-weight: 600;
   padding: 0;
@@ -33,7 +33,7 @@
 }
 .thButton:hover,
 .thButton:focus-visible {
-  background: #263d5a;
+  background: var(--thead-hover);
 }
 .thButton:focus-visible {
   outline: 2px solid #fff;
@@ -52,7 +52,7 @@
   border-bottom: 1px solid var(--gray2);
 }
 .row:hover {
-  background: #edf4fc !important;
+  background: var(--row-hover) !important;
 }
 .cell {
   padding: 8px 12px;
@@ -61,13 +61,13 @@
   border-right: 1px solid var(--gray2);
 }
 .rowME {
-  background: #f9fef9;
+  background: var(--row-me);
 }
 .rowEE {
-  background: #f5faff;
+  background: var(--row-ee);
 }
 .rowIE {
-  background: #fffef5;
+  background: var(--row-ie);
 }
 .emptyState {
   text-align: center;

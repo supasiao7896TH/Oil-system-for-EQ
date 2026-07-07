@@ -1,6 +1,6 @@
 .panel {
   background: #fff;
-  border-bottom: 3px solid var(--blue2);
+  border-bottom: 3px solid var(--primary-mid);
   padding: 16px 24px 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
@@ -16,7 +16,7 @@
   display: block;
   font-size: 11px;
   font-weight: 700;
-  color: var(--blue);
+  color: var(--primary);
   margin-bottom: 6px;
   text-transform: uppercase;
   letter-spacing: 0.6px;
@@ -34,8 +34,8 @@
   outline: none;
 }
 .input:focus {
-  border-color: var(--blue2);
-  box-shadow: 0 0 0 3px rgba(46, 117, 182, 0.15);
+  border-color: var(--primary-mid);
+  box-shadow: 0 0 0 3px var(--focus-ring);
 }
 .input::placeholder {
   color: var(--gray3);
@@ -56,9 +56,9 @@
   flex-shrink: 0;
 }
 .clearButton:hover {
-  border-color: #e74c3c;
-  color: #e74c3c;
-  background: #fef5f5;
+  border-color: var(--danger);
+  color: var(--danger);
+  background: var(--danger-soft);
 }
 
 @media (max-width: 600px) {

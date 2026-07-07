@@ -9,24 +9,24 @@
   font-weight: 800;
 }
 .ring100 {
-  background: #27ae60;
-  color: #fff;
+  background: var(--ring-100);
+  color: var(--ring-fg);
 }
 .ring85 {
-  background: #2ecc71;
-  color: #fff;
+  background: var(--ring-85);
+  color: var(--ring-fg);
 }
 .ring60 {
-  background: #f39c12;
-  color: #fff;
+  background: var(--ring-60);
+  color: var(--ring-fg);
 }
 .ring35 {
-  background: #e67e22;
-  color: #fff;
+  background: var(--ring-35);
+  color: var(--ring-fg);
 }
 .ring0 {
-  background: #ecf0f1;
-  color: #aaa;
+  background: var(--ring-0-bg);
+  color: var(--ring-0-fg);
 }
 
 .badge {
@@ -37,16 +37,16 @@
   font-weight: 700;
 }
 .badgeME {
-  background: #c8e6c9;
-  color: #1b5e20;
+  background: var(--badge-me-bg);
+  color: var(--badge-me-fg);
 }
 .badgeEE {
-  background: #bbdefb;
-  color: #0d47a1;
+  background: var(--badge-ee-bg);
+  color: var(--badge-ee-fg);
 }
 .badgeIE {
-  background: #fff9c4;
-  color: #f57f17;
+  background: var(--badge-ie-bg);
+  color: var(--badge-ie-fg);
 }
 
 .chip {
@@ -55,14 +55,14 @@
   font-size: 11px;
 }
 .chipOil {
-  background: #e3f2fd;
-  color: #1565c0;
+  background: var(--chip-oil-bg);
+  color: var(--chip-oil-fg);
 }
 .chipGrease {
-  background: #fce4ec;
-  color: #880e4f;
+  background: var(--chip-grease-bg);
+  color: var(--chip-grease-fg);
 }
 .chipOther {
-  background: #f3e5f5;
-  color: #4a148c;
+  background: var(--chip-other-bg);
+  color: var(--chip-other-fg);
 }

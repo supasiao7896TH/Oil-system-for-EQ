@@ -85,9 +85,22 @@
 }
 
 :root {
-  --navy: #1a2e4a;
-  --blue: #1e5fa8;
-  --blue2: #2e75b6;
+  /* Brand / primary — "Clean Light Teal" theme */
+  --primary-dark: #134e4a;
+  --primary: #0f766e;
+  --primary-mid: #115e59;
+  --primary-tint: #ccfbf1;
+  --focus-ring: rgba(15, 118, 110, 0.18);
+
+  /* Header */
+  --header-grad-a: #ffffff;
+  --header-grad-b: #eef2f6;
+  --header-fg: #0f172a;
+  --header-subtitle: #475569;
+  --header-stat: #0f766e;
+  --header-stat-bg: rgba(15, 118, 110, 0.1);
+
+  /* Neutrals */
   --gray1: #f5f7fa;
   --gray2: #e8ecf0;
   --gray3: #b0bec5;
@@ -95,4 +108,45 @@
      failing WCAG AA. Keep #b0bec5 for purely decorative borders/dots only. */
   --gray3-text: #546e7a;
   --text: #1a2535;
+
+  /* Danger (clear button hover) */
+  --danger: #e74c3c;
+  --danger-soft: #fef5f5;
+
+  /* Table */
+  --thead-bg: var(--primary-dark);
+  --thead-fg: #ffffff;
+  --thead-hover: #17635e;
+  --row-hover: #f0fdfa;
+  --row-me: #f9fef9;
+  --row-ee: #f5faff;
+  --row-ie: #fffef5;
+
+  /* Match-score rings (traffic-light semantics, shared with legend dots) */
+  --ring-100: #27ae60;
+  --ring-85: #2ecc71;
+  --ring-60: #f39c12;
+  --ring-35: #e67e22;
+  --ring-0-bg: #ecf0f1;
+  --ring-0-fg: #aaaaaa;
+  --ring-fg: #ffffff;
+
+  /* Department badges */
+  --badge-me-bg: #c8e6c9;
+  --badge-me-fg: #1b5e20;
+  --badge-ee-bg: #bbdefb;
+  --badge-ee-fg: #0d47a1;
+  --badge-ie-bg: #fff9c4;
+  --badge-ie-fg: #f57f17;
+
+  /* Lube-type chips */
+  --chip-oil-bg: #e3f2fd;
+  --chip-oil-fg: #1565c0;
+  --chip-grease-bg: #fce4ec;
+  --chip-grease-fg: #880e4f;
+  --chip-other-bg: #f3e5f5;
+  --chip-other-fg: #4a148c;
+
+  /* Search-term highlight */
+  --mark-bg: #fff176;
 }
