@@ -12,6 +12,26 @@
 .icon {
   font-size: 26px;
 }
+.titleGroup {
+  min-width: 0;
+}
+.helpButton {
+  all: unset;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.helpButton:hover,
+.helpButton:focus-visible {
+  background: var(--primary-tint);
+}
 .title {
   color: var(--header-fg);
   font-size: 18px;
@@ -43,5 +63,12 @@
 @media (max-width: 600px) {
   .title {
     font-size: 15px;
+  }
+  .helpLabel {
+    display: none;
+  }
+  .helpButton {
+    font-size: 18px;
+    padding: 6px 8px;
   }
 }

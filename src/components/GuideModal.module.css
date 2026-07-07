@@ -1,0 +1,108 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 1000;
+}
+
+.dialog {
+  background: #fff;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 560px;
+  max-height: min(80vh, 720px);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.dialogHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--gray2);
+}
+.dialogHeader h2 {
+  font-size: 17px;
+  color: var(--primary-dark);
+}
+
+.closeButton {
+  all: unset;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--gray3-text);
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+.closeButton:hover,
+.closeButton:focus-visible {
+  background: var(--gray1);
+  color: var(--text);
+}
+
+.dialogBody {
+  padding: 16px 20px 24px;
+  overflow-y: auto;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+.section:last-child {
+  margin-bottom: 0;
+}
+.section h3 {
+  font-size: 14px;
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+}
+.section p,
+.section li {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text);
+}
+.section ul {
+  padding-left: 20px;
+}
+.section li + li {
+  margin-top: 6px;
+}
+.section code {
+  background: var(--gray1);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 12px;
+}
+
+.scoreList {
+  list-style: none;
+  padding-left: 0;
+}
+.scoreList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.dot {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 5px;
+}
+.dot100 {
+  background: var(--ring-100);
+}
+.dot60 {
+  background: var(--ring-60);
+}
+.dot35 {
+  background: var(--ring-35);
+}
