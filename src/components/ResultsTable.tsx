@@ -5,6 +5,7 @@ import { HighlightedText } from "./HighlightedText.tsx";
 import { ScoreRing } from "./ScoreRing.tsx";
 import { SourceBadge } from "./SourceBadge.tsx";
 import { LubeTypeChip } from "./LubeTypeChip.tsx";
+import { BrandFooter } from "./BrandFooter.tsx";
 import styles from "./ResultsTable.module.css";
 
 interface Props {
@@ -47,6 +48,7 @@ export function ResultsTable({ results, query, sortColumn, sortDirection, onSort
             ? "ไม่พบรายการที่ตรงกับคำค้น — ลองตรวจสอบรหัสอุปกรณ์อีกครั้ง"
             : "เริ่มพิมพ์ในช่องค้นหาด้านบน — ใช้รหัสอุปกรณ์ (เช่น PP-503) หรือชื่ออุปกรณ์ (เช่น Pump)"}
         </p>
+        <BrandFooter />
       </div>
     );
   }
