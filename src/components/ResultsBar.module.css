@@ -1,0 +1,66 @@
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 24px;
+  background: var(--gray1);
+  border-bottom: 1px solid var(--gray2);
+}
+.count {
+  font-size: 13px;
+  color: #555;
+}
+.count strong {
+  color: var(--blue);
+  font-size: 15px;
+}
+.total {
+  color: var(--gray3-text);
+  margin-left: 4px;
+}
+.sortInfo {
+  font-size: 11px;
+  color: var(--blue2);
+  font-weight: 600;
+  background: #e8f4fd;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-left: 8px;
+}
+.legend {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.legItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: #777;
+}
+.legDot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+.legExact {
+  background: #27ae60;
+}
+.legClose {
+  background: #f39c12;
+}
+.legPartial {
+  background: #95a5a6;
+}
+
+@media (max-width: 600px) {
+  .bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .legend {
+    display: none;
+  }
+}
