@@ -1,0 +1,68 @@
+.panel {
+  background: #fff;
+  border-bottom: 3px solid var(--blue2);
+  padding: 16px 24px 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.row {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+.field {
+  flex: 1;
+}
+.label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--gray2);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 15px;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  outline: none;
+}
+.input:focus {
+  border-color: var(--blue2);
+  box-shadow: 0 0 0 3px rgba(46, 117, 182, 0.15);
+}
+.input::placeholder {
+  color: var(--gray3);
+  font-size: 13px;
+}
+.clearButton {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: 2px solid var(--gray3);
+  background: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  transition: 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.clearButton:hover {
+  border-color: #e74c3c;
+  color: #e74c3c;
+  background: #fef5f5;
+}
+
+@media (max-width: 600px) {
+  .panel {
+    padding: 12px 14px 10px;
+  }
+}

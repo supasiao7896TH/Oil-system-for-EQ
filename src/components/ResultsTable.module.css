@@ -1,0 +1,80 @@
+.tableWrap {
+  overflow: auto;
+  max-height: calc(100vh - 240px);
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 980px;
+}
+.th {
+  background: var(--navy);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+}
+.thButton {
+  all: unset;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 12px;
+  cursor: pointer;
+  user-select: none;
+  font: inherit;
+  color: inherit;
+}
+.thButton:hover,
+.thButton:focus-visible {
+  background: #263d5a;
+}
+.thButton:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+}
+.sortArrow {
+  opacity: 0.4;
+  margin-left: 4px;
+  font-size: 11px;
+}
+.sortArrowActive {
+  opacity: 1;
+}
+.row {
+  transition: background 0.12s;
+  border-bottom: 1px solid var(--gray2);
+}
+.row:hover {
+  background: #edf4fc !important;
+}
+.cell {
+  padding: 8px 12px;
+  font-size: 13px;
+  vertical-align: middle;
+  border-right: 1px solid var(--gray2);
+}
+.rowME {
+  background: #f9fef9;
+}
+.rowEE {
+  background: #f5faff;
+}
+.rowIE {
+  background: #fffef5;
+}
+.emptyState {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--gray3-text);
+}
+.emptyIcon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}

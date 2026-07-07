@@ -1,0 +1,47 @@
+.header {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.icon {
+  font-size: 26px;
+}
+.title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+.subtitle {
+  color: #aed6f1;
+  font-size: 11px;
+  display: block;
+  margin-top: 2px;
+}
+.stats {
+  margin-left: auto;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 6px 14px;
+  text-align: right;
+}
+.stats span {
+  color: #fff;
+  font-size: 11px;
+  display: block;
+}
+.stats strong {
+  font-size: 20px;
+  color: #f1c40f;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 15px;
+  }
+}
