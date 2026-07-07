@@ -89,10 +89,18 @@
     overflow: visible;
   }
   .table,
-  .table tbody,
-  .table tr {
+  .table tbody {
     display: block;
     width: 100%;
+    min-width: 0;
+  }
+  .table tr {
+    /* No explicit width here: .row below adds a horizontal margin for the card
+       gutter, and a block box with width:auto already shrinks to fit that
+       margin — forcing width:100% here would make the total footprint
+       100% + 2×margin, overflowing the viewport. */
+    display: block;
+    min-width: 0;
   }
   .table thead {
     /* Column headers are replaced by the per-cell .cellLabel below; keep them
