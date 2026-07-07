@@ -12,20 +12,20 @@ export function SearchPanel({ query, onQueryChange, onClear }: Props) {
       <div className={styles.row}>
         <div className={styles.field}>
           <label htmlFor="s_tag" className={styles.label}>
-            🏷 EQUIPMENT TAG NO.
+            🔎 ค้นหาอุปกรณ์ (EQ Tag / ชื่ออุปกรณ์)
           </label>
           <input
             id="s_tag"
             type="text"
             className={styles.input}
-            placeholder="พิมพ์ EQ Tag เช่น  PP-503  ,  PC-201  ,  Compressor  ,  Pump  ..."
+            placeholder="ใส่รหัสอุปกรณ์หรือชื่ออุปกรณ์ เช่น PP-503, PC-201, Compressor, Pump"
             autoFocus
             value={query}
             onChange={(e) => onQueryChange(e.target.value)}
           />
         </div>
         <button type="button" className={styles.clearButton} onClick={onClear}>
-          🗑 ล้าง
+          ✕ ล้างคำค้น
         </button>
       </div>
     </div>

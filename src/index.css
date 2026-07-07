@@ -13,6 +13,13 @@ body {
   font-size: 14px;
 }
 
+mark {
+  background: var(--mark-bg);
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

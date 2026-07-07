@@ -11,7 +11,7 @@
   color: #555;
 }
 .count strong {
-  color: var(--blue);
+  color: var(--primary);
   font-size: 15px;
 }
 .total {
@@ -20,9 +20,9 @@
 }
 .sortInfo {
   font-size: 11px;
-  color: var(--blue2);
+  color: var(--primary-mid);
   font-weight: 600;
-  background: #e8f4fd;
+  background: var(--primary-tint);
   padding: 3px 10px;
   border-radius: 12px;
   margin-left: 8px;
@@ -45,13 +45,13 @@
   border-radius: 50%;
 }
 .legExact {
-  background: #27ae60;
+  background: var(--ring-100);
 }
 .legClose {
-  background: #f39c12;
+  background: var(--ring-60);
 }
 .legPartial {
-  background: #95a5a6;
+  background: var(--gray3);
 }
 
 @media (max-width: 600px) {
