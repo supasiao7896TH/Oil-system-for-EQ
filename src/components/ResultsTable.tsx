@@ -1,5 +1,6 @@
+import type { ReactNode } from "react";
 import type { ScoredRecord, SortColumn, SortDirection } from "../lib/search.ts";
-import { COLUMNS } from "./tableColumns.ts";
+import { COLUMNS, columnLabel } from "./tableColumns.ts";
 import { HighlightedText } from "./HighlightedText.tsx";
 import { ScoreRing } from "./ScoreRing.tsx";
 import { SourceBadge } from "./SourceBadge.tsx";
@@ -19,6 +20,18 @@ const ROW_CLASS_BY_SOURCE: Record<ScoredRecord["Source"], string> = {
   EE: styles.rowEE,
   IE: styles.rowIE,
 };
+
+/** On narrow screens the table becomes a stack of cards (CSS-only); the label
+ * span is hidden on desktop and shown before the value on mobile so each field
+ * stays identifiable without the (hidden) column header row. */
+function Cell({ column, children }: { column: SortColumn; children: ReactNode }) {
+  return (
+    <td className={styles.cell}>
+      <span className={styles.cellLabel}>{columnLabel(column)}</span>
+      <span className={styles.cellValue}>{children}</span>
+    </td>
+  );
+}
 
 export function ResultsTable({ results, query, sortColumn, sortDirection, onSort }: Props) {
   const hasQuery = query.trim() !== "";
@@ -67,35 +80,35 @@ export function ResultsTable({ results, query, sortColumn, sortDirection, onSort
         <tbody>
           {results.map((r) => (
             <tr key={r.id} className={`${styles.row} ${ROW_CLASS_BY_SOURCE[r.Source]}`}>
-              <td className={styles.cell}>
+              <Cell column="score">
                 <ScoreRing score={r.score} />
-              </td>
-              <td className={styles.cell}>
+              </Cell>
+              <Cell column="Source">
                 <SourceBadge source={r.Source} />
-              </td>
-              <td className={styles.cell}>{r.Plant}</td>
-              <td className={styles.cell}>
+              </Cell>
+              <Cell column="Plant">{r.Plant}</Cell>
+              <Cell column="EQ_Tag">
                 <strong>
                   <HighlightedText text={r.EQ_Tag} query={query} />
                 </strong>
-              </td>
-              <td className={styles.cell}>
+              </Cell>
+              <Cell column="EQ_Type">
                 <HighlightedText text={r.EQ_Type} query={query} />
-              </td>
-              <td className={styles.cell}>{r.Part}</td>
-              <td className={styles.cell}>
+              </Cell>
+              <Cell column="Part">{r.Part}</Cell>
+              <Cell column="GCMP_use">
                 <strong>
                   <HighlightedText text={r.GCMP_use} query={query} />
                 </strong>
-              </td>
-              <td className={styles.cell}>
+              </Cell>
+              <Cell column="Lube_Type">
                 <LubeTypeChip lubeType={r.Lube_Type} />
-              </td>
-              <td className={styles.cell}>{r.Replace_Qty}</td>
-              <td className={styles.cell}>{r.Unit}</td>
-              <td className={styles.cell}>{r.Makeup_Interval}</td>
-              <td className={styles.cell}>{r.Makeup_Qty}</td>
-              <td className={styles.cell}>{r.Replace_Interval}</td>
+              </Cell>
+              <Cell column="Replace_Qty">{r.Replace_Qty}</Cell>
+              <Cell column="Unit">{r.Unit}</Cell>
+              <Cell column="Makeup_Interval">{r.Makeup_Interval}</Cell>
+              <Cell column="Makeup_Qty">{r.Makeup_Qty}</Cell>
+              <Cell column="Replace_Interval">{r.Replace_Interval}</Cell>
             </tr>
           ))}
         </tbody>
