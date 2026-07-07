@@ -78,3 +78,59 @@
   font-size: 48px;
   margin-bottom: 12px;
 }
+
+.cellLabel {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .tableWrap {
+    max-height: none;
+    overflow: visible;
+  }
+  .table,
+  .table tbody,
+  .table tr {
+    display: block;
+    width: 100%;
+  }
+  .table thead {
+    /* Column headers are replaced by the per-cell .cellLabel below; keep them
+       for screen readers navigating in table mode, hide them visually. */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+  .row {
+    display: block;
+    margin: 10px;
+    border: 1px solid var(--gray2);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+  .cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-right: none;
+    border-bottom: 1px solid var(--gray2);
+  }
+  .cell:last-child {
+    border-bottom: none;
+  }
+  .cellLabel {
+    display: inline-block;
+    flex: 0 0 40%;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gray3-text);
+    text-transform: uppercase;
+  }
+  .cellValue {
+    flex: 1;
+    min-width: 0;
+  }
+}
