@@ -1,0 +1,47 @@
+.banner {
+  background: var(--primary-tint);
+  color: var(--primary-dark);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.text {
+  flex: 1;
+  font-size: 13px;
+  min-width: 0;
+}
+.installButton {
+  all: unset;
+  cursor: pointer;
+  background: var(--primary);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.installButton:hover,
+.installButton:focus-visible {
+  background: var(--primary-mid);
+}
+.dismissButton {
+  all: unset;
+  cursor: pointer;
+  color: var(--primary-dark);
+  font-size: 16px;
+  line-height: 1;
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .text {
+    font-size: 12px;
+  }
+}
