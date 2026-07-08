@@ -6,7 +6,7 @@ import styles from "./BrandFooter.module.css";
 export function BrandFooter() {
   return (
     <div className={styles.brandFooter}>
-      <div className={styles.brandFlag}>
+      <div className={styles.brandFlag} aria-hidden="true">
         <div></div>
         <div></div>
         <div></div>
@@ -16,7 +16,7 @@ export function BrandFooter() {
       <span className={styles.brandName}>
         Supasit<span>@1981th</span>
       </span>
-      <div className={styles.brandPaws}>
+      <div className={styles.brandPaws} aria-hidden="true">
         <div className={styles.brandPaw}>
           <span className={styles.pad}></span>
           <span className={styles.toe1}></span>
