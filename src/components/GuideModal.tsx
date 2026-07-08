@@ -6,8 +6,7 @@ interface Props {
   onClose: () => void;
 }
 
-// TODO: replace with the real contact channel once decided (e.g. Line ID, phone number, email).
-const CONTACT_INFO = "รอข้อมูลช่องทางติดต่อจากทีมงาน — จะอัปเดตเร็ว ๆ นี้";
+const CONTACT_INFO = "Line: supasiao · Email: Supasit.A@pttgcgroup.com";
 
 export function GuideModal({ open, onClose }: Props) {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
