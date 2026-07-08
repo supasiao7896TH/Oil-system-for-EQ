@@ -1,32 +1,19 @@
-/** Oil-drum icon matching the classic 🛢️ emoji silhouette (elliptical metal lid,
- * cylindrical body with shading + ridge bands) but recolored: the body (originally
- * blue) is now yellow to match the real Shell Omala 200L drums used on-site. The
- * lid/rivets were already gray/silver in the original, not blue, so they're kept
- * as-is. */
+/** Flat oil-drum icon — yellow body + black cap/rim, matching the real Shell Omala
+ * 200L drums used on-site. A custom SVG (not the 🛢️ emoji) so the color is ours to
+ * control, not whatever the OS emoji font happens to render. */
 export function OilDrumIcon({ className }: { className?: string }) {
   return (
     <svg
       className={className}
       width="1em"
       height="1em"
-      viewBox="0 0 36 36"
+      viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      {/* body */}
-      <rect x="9" y="9" width="18" height="23" rx="2.5" fill="#FFCC4D" />
-      {/* shadow (right half) */}
-      <path d="M18 9h6.5a2.5 2.5 0 0 1 2.5 2.5V29.5A2.5 2.5 0 0 1 24.5 32H18z" fill="#F0A500" />
-      {/* highlight (left streak) */}
-      <rect x="11.3" y="9" width="2.4" height="23" fill="#FFD983" />
-      {/* ridge bands */}
-      <rect x="9" y="16.2" width="18" height="2" fill="#E8960C" />
-      <rect x="9" y="23.8" width="18" height="2" fill="#E8960C" />
-      {/* lid (unchanged — gray/silver, not blue in the original) */}
-      <ellipse cx="18" cy="9.2" rx="9" ry="3.2" fill="#CCD6DD" />
-      <ellipse cx="18" cy="8.6" rx="7.3" ry="2.3" fill="#E1E8ED" />
-      <ellipse cx="14.2" cy="9" rx="1" ry="0.55" fill="#99AAB5" />
-      <ellipse cx="21.8" cy="9.5" rx="1" ry="0.55" fill="#99AAB5" />
+      <rect x="5" y="6" width="14" height="15" rx="2" fill="#FFC107" />
+      <rect x="5" y="12.5" width="14" height="2.2" fill="#E0A200" />
+      <rect x="5" y="2.5" width="14" height="4" rx="1.3" fill="#1A1A1A" />
     </svg>
   );
 }
