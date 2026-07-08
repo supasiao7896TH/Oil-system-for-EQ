@@ -3,6 +3,7 @@ import metaData from "./data/meta.generated.json";
 import type { LubricantRecord, RevisionMeta } from "./data/types.ts";
 import { useLubricantSearch } from "./hooks/useLubricantSearch.ts";
 import { Header } from "./components/Header.tsx";
+import { InstallBanner } from "./components/InstallBanner.tsx";
 import { SearchPanel } from "./components/SearchPanel.tsx";
 import { ResultsBar } from "./components/ResultsBar.tsx";
 import { ResultsTable } from "./components/ResultsTable.tsx";
@@ -16,6 +17,7 @@ function App() {
   return (
     <>
       <Header meta={meta} resultCount={results.length} />
+      <InstallBanner />
       <SearchPanel query={query} onQueryChange={setQuery} onClear={clear} />
       <ResultsBar
         shownCount={results.length}
