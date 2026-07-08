@@ -24,7 +24,7 @@ export function Header({ meta, resultCount }: Props) {
         </p>
       </div>
       <button type="button" className={styles.helpButton} onClick={() => setGuideOpen(true)} aria-label="วิธีใช้งาน">
-        <span aria-hidden="true">ⓘ</span>
+        <span aria-hidden="true">📖</span>
         <span className={styles.helpLabel}>วิธีใช้งาน</span>
       </button>
       <div className={styles.stats}>
