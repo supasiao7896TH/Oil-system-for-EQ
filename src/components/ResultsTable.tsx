@@ -6,6 +6,7 @@ import { ScoreRing } from "./ScoreRing.tsx";
 import { SourceBadge } from "./SourceBadge.tsx";
 import { LubeTypeChip } from "./LubeTypeChip.tsx";
 import { BrandFooter } from "./BrandFooter.tsx";
+import { OilDrumIcon } from "./OilDrumIcon.tsx";
 import styles from "./ResultsTable.module.css";
 
 interface Props {
@@ -41,7 +42,7 @@ export function ResultsTable({ results, query, sortColumn, sortDirection, onSort
     return (
       <div className={styles.emptyState}>
         <div className={styles.emptyIcon} aria-hidden="true">
-          {hasQuery ? "🔎" : "🛢️"}
+          {hasQuery ? "🔎" : <OilDrumIcon />}
         </div>
         <p>
           {hasQuery

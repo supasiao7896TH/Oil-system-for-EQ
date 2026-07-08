@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { RevisionMeta } from "../data/types.ts";
 import { GuideModal } from "./GuideModal.tsx";
+import { OilDrumIcon } from "./OilDrumIcon.tsx";
 import styles from "./Header.module.css";
 
 interface Props {
@@ -14,7 +15,7 @@ export function Header({ meta, resultCount }: Props) {
   return (
     <header className={styles.header}>
       <div className={styles.icon} aria-hidden="true">
-        🛢️
+        <OilDrumIcon />
       </div>
       <div className={styles.titleGroup}>
         <h1 className={styles.title}>OilMate</h1>
