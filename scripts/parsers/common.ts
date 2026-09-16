@@ -20,9 +20,7 @@ export function getSheet(
 /** Excel cell values can be strings, numbers, rich text, formula results, or dates. */
 export function cellToDisplayString(value: ExcelJS.CellValue): string {
   if (value === null || value === undefined) return "";
-  if (typeof value === "number") {
-    return Number.isInteger(value) ? String(value) : String(value);
-  }
+  if (typeof value === "number") return String(value);
   if (typeof value === "string") return value.trim();
   if (value instanceof Date) return value.toISOString().slice(0, 10);
   if (typeof value === "object") {

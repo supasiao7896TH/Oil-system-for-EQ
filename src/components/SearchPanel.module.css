@@ -33,7 +33,7 @@
     box-shadow 0.2s;
   outline: none;
 }
-.input:focus {
+.input:focus-visible {
   border-color: var(--primary-mid);
   box-shadow: 0 0 0 3px var(--focus-ring);
 }
@@ -59,6 +59,10 @@
   border-color: var(--danger);
   color: var(--danger);
   background: var(--danger-soft);
+}
+.clearButton:focus-visible {
+  border-color: var(--primary-mid);
+  box-shadow: 0 0 0 3px var(--focus-ring);
 }
 
 @media (max-width: 600px) {
