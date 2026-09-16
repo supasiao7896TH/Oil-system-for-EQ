@@ -30,7 +30,3 @@ npm run lint            # oxlint
 - ผู้ใช้เป็นคน merge PR เองผ่าน GitHub web UI — อย่า merge เอง อย่า force-push โดยไม่ถาม
 - ถ้า branch เดิมถูก merge ไปแล้วและมีงานใหม่ต่อ ให้ restart branch จาก `origin/main` ล่าสุดก่อน (`git fetch origin main && git checkout -B claude/modest-fermi-e38d82 origin/main`) แทนที่จะ stack ทับ history เก่าที่ merge ไปแล้ว
 - สื่อสารกับผู้ใช้เป็นภาษาไทยเสมอ (ผู้ใช้เป็นวิศวกรโรงงาน พูดไทย)
-
-## จุดที่ผู้ใช้อยากรอเพิ่มทีหลัง
-
-- `src/components/GuideModal.tsx` มี placeholder ข้อความติดต่อ ("รอข้อมูลช่องทางติดต่อจากทีมงาน") ผู้ใช้บอกว่าจะใส่เอง — ไม่ต้องแก้จนกว่าจะขอ
